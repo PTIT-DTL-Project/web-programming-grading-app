@@ -10,11 +10,17 @@
     </parent>
 
     <artifactId>web_programming_grading_executor</artifactId>
-
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>vn.edu.ptit.d22</groupId>
+            <artifactId>web_programming_grading_core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
