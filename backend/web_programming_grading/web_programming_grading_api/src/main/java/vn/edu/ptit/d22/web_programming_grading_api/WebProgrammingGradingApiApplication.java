@@ -1,4 +1,4 @@
-package vn.edu.ptit.d22;
+package vn.edu.ptit.d22.web_programming_grading_api;
 
 
 import org.springframework.boot.SpringApplication;

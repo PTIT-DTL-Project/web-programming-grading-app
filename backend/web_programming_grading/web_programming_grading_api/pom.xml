@@ -10,6 +10,25 @@
     </parent>
 
     <artifactId>web_programming_grading_api</artifactId>
+    <profiles>
+        <!-- Staging Profile -->
+        <profile>
+            <id>stg</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.active>stg</spring.profiles.active>
+            </properties>
+        </profile>
+        <!-- Production Profile (example) -->
+        <profile>
+            <id>prod</id>
+            <properties>
+                <spring.profiles.active>prod</spring.profiles.active>
+            </properties>
+        </profile>
+    </profiles>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
