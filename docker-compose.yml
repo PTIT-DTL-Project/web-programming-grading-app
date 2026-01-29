@@ -4,7 +4,8 @@ services:
   keycloak:
     image: quay.io/keycloak/keycloak:24.0.0
     container_name: keycloak
-    command: ["start-dev"]
+    # Auto-import realms from /opt/keycloak/data/import (see infra/keycloak/README.md)
+    command: ["start-dev", "--import-realm"]
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
@@ -13,6 +14,8 @@ services:
     # Persist Keycloak data (realms, users, roles) between restarts
     volumes:
       - keycloak_data:/opt/keycloak/data
+      # Folder in repo containing exported realms to share via Git
+      - ./infra/keycloak:/opt/keycloak/data/import
     restart: unless-stopped
 
 volumes:
