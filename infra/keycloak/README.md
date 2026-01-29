@@ -26,7 +26,8 @@ This folder is used to store the exported Keycloak realm configuration for local
      - `student1` with role `STUDENT`
      - `teacher1` with role `TEACHER`
      - `admin1` with role `ADMIN`
-
+ 
+ Đăng nhập bằng user mình tạo phải bằng đường dẫn : http://localhost:8080/realms/tên realm mình tạo/account
 
 
 
